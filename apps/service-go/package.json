@@ -1,0 +1,6 @@
+{
+  "name": "nxacme/service-go",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Go service application"
+}
