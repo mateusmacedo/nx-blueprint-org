@@ -12,7 +12,6 @@ permissions:
 
 env:
   NODE_VERSION: '18'
-  GO_VERSION: '1.23'
   PNPM_VERSION: '9.15.0'
 
 jobs:
@@ -33,30 +32,11 @@ jobs:
           cache: 'pnpm'
           registry-url: 'https://registry.npmjs.org'
 
-      - uses: actions/setup-go@v5
-        with:
-          go-version: ${{ env.GO_VERSION }}
-
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
-      - name: Configure Go for publishing
-        run: |
-          go env -w GOPROXY=direct
-          go env -w GOSUMDB=off
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-
       - name: Publish NPM packages
-        run: pnpm exec nx release publish --projects="@acmeorg/*,@acmeorg/utils-nestjs"
+        run: pnpm exec nx release publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-
-      - name: Publish Go packages
-        run: |
-          echo "Go packages are published via Git tags"
-          echo "Tags created during versioning process:"
-          git tag --list | grep -E "(nxacme/service-go|nxacme/utils-go)" || echo "No Go tags found"
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
