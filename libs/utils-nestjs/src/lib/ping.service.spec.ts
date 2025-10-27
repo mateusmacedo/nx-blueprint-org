@@ -41,9 +41,11 @@ describe('PingService', () => {
       expect(result.timestamp.getTime()).toBeGreaterThanOrEqual(beforeCall.getTime());
     });
 
-    it('should return different timestamps on multiple calls', () => {
+    it('should return different timestamps on multiple calls', async () => {
       // Arrange & Act
       const result1 = service.healthCheck();
+      // Adiciona um pequeno delay para garantir timestamps diferentes
+      await new Promise(resolve => setTimeout(resolve, 1));
       const result2 = service.healthCheck();
 
       // Assert
