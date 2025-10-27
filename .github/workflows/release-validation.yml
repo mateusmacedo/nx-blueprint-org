@@ -27,4 +27,6 @@ jobs:
         run: pnpm install --frozen-lockfile
 
       - name: Validate release (dry-run)
-        run: pnpm exec nx release --dry-run
+        run: |
+          pnpm exec nx release version --dry-run
+          pnpm exec nx release changelog --dry-run
