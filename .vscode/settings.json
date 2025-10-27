@@ -1,7 +1,6 @@
 {
-    "nxConsole.generateAiAgentRules": true,
     "sonarlint.connectedMode.project": {
         "connectionId": "mateusmacedo",
-        "projectKey": "acmeorg"
+        "projectKey": "mateusmacedo_nx-blueprint-org"
     }
 }

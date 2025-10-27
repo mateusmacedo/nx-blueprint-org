@@ -242,13 +242,17 @@
   "neverConnectToCloud": true,
   "parallel": 5,
   "defaultBase": "main",
+  "pluginsConfig": {
+    "@nx/webpack/plugin": {
+      "pruneLockFile": false
+    }
+  },
   "release": {
     "projectsRelationship": "independent",
     "releaseTagPattern": "{projectName}@v{version}",
     "projects": [
-      "@acmeorg/*",
-      "!@acmeorg/source",
-      "@acmeorg/utils-nestjs"
+      "@nxacme/*",
+      "!@nxacme/source"
     ],
     "version": {
       "preVersionCommand": "pnpm nx run-many -t build",
