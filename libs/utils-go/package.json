@@ -1,0 +1,6 @@
+{
+  "name": "nxacme/utils-go",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Go utility library"
+}
