@@ -252,7 +252,7 @@
     "releaseTagPattern": "{projectName}@v{version}",
     "projects": [
       "@nxacme/*",
-      "nxacme/utils-go",
+      "nxacme/*",
       "!@nxacme/source"
     ],
     "version": {
