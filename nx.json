@@ -242,6 +242,11 @@
   "neverConnectToCloud": true,
   "parallel": 5,
   "defaultBase": "main",
+  "pluginsConfig": {
+    "@nx/webpack/plugin": {
+      "pruneLockFile": false
+    }
+  },
   "release": {
     "projectsRelationship": "independent",
     "releaseTagPattern": "{projectName}@v{version}",

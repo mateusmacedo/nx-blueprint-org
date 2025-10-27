@@ -9,6 +9,8 @@
     "build": "webpack-cli build node-env=production",
     "dev": "webpack-cli build node-env=development"
   },
-  "dependencies": {},
+  "dependencies": {
+    "@nxacme/utils-nestjs": "workspace:*"
+  },
   "devDependencies": {}
 }
