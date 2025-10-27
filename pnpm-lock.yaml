@@ -178,7 +178,11 @@ importers:
         specifier: ^5.1.4
         version: 5.1.4(webpack@5.98.0)
 
-  apps/bff-nestjs: {}
+  apps/bff-nestjs:
+    dependencies:
+      '@nxacme/utils-nestjs':
+        specifier: workspace:*
+        version: link:../../libs/utils-nestjs
 
   apps/service-go: {}
 
