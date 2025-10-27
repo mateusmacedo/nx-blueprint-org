@@ -88,6 +88,7 @@ pnpm nx show project <project-name>
 - **[Arquitetura](docs/ARCHITECTURE.md)** - Arquitetura completa do monorepo
 - **[Sistema de Tags](docs/TAG_SYSTEM.md)** - Controle de dependências
 - **[Pipeline de Tasks](docs/TASK_PIPELINE.md)** - Execução e release
+- **[Nx Release Workflow](docs/NX_RELEASE_WORKFLOW.md)** - Processo de release com configuração granular
 - **[Configuração de Cache](docs/CACHE_CONFIGURATION.md)** - Otimização de performance
 - **[Guia de Flaky Tasks](docs/FLAKY_TASKS_GUIDE.md)** - Troubleshooting
 - **[Procedimento Git Import](docs/GIT_IMPORT_PROCEDURE.md)** - Importação de projetos
@@ -148,6 +149,7 @@ pnpm release:publish
 
 Para detalhes adicionais do processo consulte:
 - [Pipeline de Tasks](docs/TASK_PIPELINE.md)
+- [Nx Release Workflow](docs/NX_RELEASE_WORKFLOW.md)
 
 ### 🔐 Segredos e Variáveis de Ambiente
 
